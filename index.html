@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> /* set the CSS */
+
+        body { 
+            font: 12px Arial;
+            background-color: rgb(212, 225, 235);
+            padding: 30px;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            box-sizing: border-box;
+        }
+        
+        path { 
+            stroke: steelblue;
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: grey;
+            stroke-width: 1;
+            shape-rendering: crispEdges;
+        }
+
+        select {
+            display: block;
+            width: 20%;
+            font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+            font-size: 18px;
+            color: #60666d;
+        }
+        
+        div.tooltip {	
+            position: absolute;			
+            text-align: center;			
+            width: 60px;					
+            height: 28px;					
+            padding: 2px;				
+            font: 12px sans-serif;		
+            background: lightsteelblue;	
+            border: 0px;		
+            border-radius: 8px;			
+            pointer-events: none;	
+            color: black;		
+        }
+
+        #data-viz {
+            margin-top: 25px;
+        }
+        </style>
+
+</head>
+<body>
+    <h1>Covid-19</h1>
+    <h3>Cases per municipality</h3>
+    <p>Select municipality:</p>
+    <select id="selectButton"></select>
+    <div id="data-viz"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
